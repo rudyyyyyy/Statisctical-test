@@ -10,7 +10,7 @@
 #                   Standard Deviation / Square Root of n
 
 
-data <- read_excel("Data.xlsx")
+data <- read_excel("Data_red.xlsx")
 print(data)
 
 zStat <- (mean(data$`weight(lbs)`) - 7.5) / (1.25 / sqrt(nrow(data)))
@@ -19,6 +19,8 @@ pvalue=pnorm(q=zStat,lower.tail=FALSE)
 print(pvalue)
 mean(data$`weight(lbs)`)
 
-# p-value is greater than 0.05 , so you cannot reject the null hypothesis (0.07206352)
+# p-value is very high , so you cannot reject the null hypothesis (0.99),
+# removed a lot of data sets
+
 
 
